@@ -35,6 +35,7 @@ export default function NewsList() {
               title={item.title}
               sourceName={item.source.name}
               publishedAt={item.publishedAt}
+              urlToImage={item.urlToImage}
             />
           )}
         />

@@ -1,19 +1,24 @@
-/** @format */
-import { View, Text, StyleSheet } from 'react-native'
+import React from 'react'
+import { View, Text, StyleSheet, Image } from 'react-native'
 
-function NewsCard({ title, sourceName, publishedAt }) {
+function NewsCard({ title, sourceName, publishedAt, urlToImage }) {
   return (
     <View style={styles.card}>
-      <Text style={styles.title}>{title}</Text>
-      <View>
-        <Text style={styles.source}>{sourceName}</Text>
-        <Text>{publishedAt}</Text>
+      <Image source={{ uri: urlToImage }} style={styles.image} />
+      <View style={styles.textContainer}>
+        <Text style={styles.title}>{title}</Text>
+        <View>
+          <Text style={styles.source}>{sourceName}</Text>
+          <Text>{publishedAt}</Text>
+        </View>
       </View>
     </View>
   )
 }
+
 const styles = StyleSheet.create({
   card: {
+    flexDirection: 'row',
     backgroundColor: '#FDF5E6',
     padding: 10,
     margin: 10,
@@ -23,6 +28,15 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 2,
     elevation: 2
+  },
+  image: {
+    width: 80,
+    height: 80,
+    marginRight: 10,
+    borderRadius: 5
+  },
+  textContainer: {
+    flex: 1
   },
   title: {
     fontSize: 18,
