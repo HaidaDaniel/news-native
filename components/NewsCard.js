@@ -17,13 +17,14 @@ function NewsCard({ title, publishedAt, urlToImage }) {
 
 const styles = StyleSheet.create({
   card: {
+    borderWidth: 1,
+    borderColor: 'fff',
     flexDirection: 'row',
     backgroundColor: '#FDF5E6',
     minWidth: 305,
     width: '100%',
     padding: 10,
-    marginVertical: 10,
-    borderRadius: 5,
+    marginVertical: 3,
     shadowColor: 'rgba(0, 0, 0, 0.1)',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.8,

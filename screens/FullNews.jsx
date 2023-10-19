@@ -22,7 +22,7 @@ function FullNews() {
       <Image source={{ uri: urlToImage }} style={styles.image} />
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.source}>{sourceName}</Text>
+        <Text style={styles.source}>source : {sourceName}</Text>
         <TouchableOpacity onPress={openURL}>
           <Text>{content}</Text>
         </TouchableOpacity>

@@ -1,4 +1,3 @@
-/** @format */
 import { useNavigation } from '@react-navigation/native'
 import React, { useState, useEffect } from 'react'
 import {
@@ -6,7 +5,8 @@ import {
   FlatList,
   ActivityIndicator,
   RefreshControl,
-  TouchableOpacity
+  TouchableOpacity,
+  StyleSheet
 } from 'react-native'
 import { fetchTopNewsInUSA } from '../api'
 import { FormatDate } from '../helpers/FormatDate'
@@ -43,7 +43,7 @@ export default function NewsList() {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       {loading ? (
         <View>
           <ActivityIndicator
@@ -74,3 +74,9 @@ export default function NewsList() {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 3
+  }
+})
