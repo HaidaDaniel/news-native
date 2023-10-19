@@ -19,7 +19,13 @@ function FullNews() {
 
   return (
     <View style={styles.card}>
-      <Image source={{ uri: urlToImage }} style={styles.image} />
+      <View style={styles.imgContainer}>
+        <Image
+          source={{ uri: urlToImage }}
+          style={styles.image}
+          resizeMode='stretch'
+        />
+      </View>
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.source}>source : {sourceName}</Text>
@@ -34,25 +40,32 @@ function FullNews() {
 
 const styles = StyleSheet.create({
   card: {
-    flexDirection: 'row',
+    width: '98%',
+    height: '95%',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'start',
     backgroundColor: '#FDF5E6',
-    padding: 10,
-    margin: 10,
-    borderRadius: 5,
+    margin: 3,
+    padding: 5,
+    borderWidth: 1,
+    borderColor: 'fff',
     shadowColor: 'rgba(0, 0, 0, 0.1)',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.8,
     shadowRadius: 2,
     elevation: 2
   },
+  imgContainer: {
+    width: '100%'
+  },
   image: {
-    width: 80,
-    height: 80,
-    marginRight: 10,
-    borderRadius: 5
+    width: '100%',
+    height: 200
   },
   textContainer: {
-    flex: 1
+    flex: 1,
+    marginTop: 10
   },
   title: {
     fontSize: 18,

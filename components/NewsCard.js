@@ -5,7 +5,11 @@ function NewsCard({ title, publishedAt, urlToImage }) {
   return (
     <View style={styles.card}>
       <View style={styles.leftBox}>
-        <Image source={{ uri: urlToImage }} style={styles.image} />
+        <Image
+          source={{ uri: urlToImage }}
+          style={styles.image}
+          resizeMode='cover'
+        />
         <Text style={styles.publishedAt}>{publishedAt}</Text>
       </View>
       <View style={styles.textContainer}>
