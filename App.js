@@ -1,13 +1,9 @@
 /** @format */
-import { StyleSheet, Text, View } from 'react-native'
-import NewsList from './components/NewsList'
+import { StatusBar, StyleSheet, View } from 'react-native'
+import Navigation from './screens/Navigation'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <NewsList />
-    </View>
-  )
+  return <Navigation />
 }
 
 const styles = StyleSheet.create({

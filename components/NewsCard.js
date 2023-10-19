@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
 
-function NewsCard({ title, sourceName, publishedAt, urlToImage }) {
+function NewsCard({ title, publishedAt, urlToImage }) {
   return (
     <View style={styles.card}>
       <View style={styles.leftBox}>
         <Image source={{ uri: urlToImage }} style={styles.image} />
-        <Text>{publishedAt}</Text>
+        <Text style={styles.publishedAt}>{publishedAt}</Text>
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
     backgroundColor: '#FDF5E6',
-    minWidth: 285,
+    minWidth: 305,
     width: '100%',
     padding: 10,
     marginVertical: 10,
@@ -31,9 +31,8 @@ const styles = StyleSheet.create({
     elevation: 2
   },
   image: {
-    width: 80,
-    height: 80,
-    marginRight: 10,
+    width: 90,
+    height: 90,
     borderRadius: 5
   },
   textContainer: {
@@ -48,9 +47,10 @@ const styles = StyleSheet.create({
     color: 'gray'
   },
   leftBox: {
-    width: 80,
+    width: 92,
     marginRight: 8
-  }
+  },
+  publishedAt: {}
 })
 
 export default NewsCard
