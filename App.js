@@ -1,5 +1,5 @@
 /** @format */
-import { StatusBar, StyleSheet, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import Navigation from './screens/Navigation'
 
 export default function App() {
